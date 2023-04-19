@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sketch-color-picker</title>
+  <script src="../lib/sketch-color-picker.min.js"></script>
+</head>
+
+<body>
+  <style>
+    section {
+      height: 300vh;
+    }
+    .sketch {
+      position: absolute;
+      left: 50%;
+      top: 150%;
+      padding: 10px 20px;
+      background-color: #13e46f;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  </style>
+
+  <section>
+    <div class="sketch">
+      <!-- <img height="1000px" data-i="1" src="http://nwzimg.wezhan.cn/contents/sitefiles2062/10312583/images/42369021.png"  onerror="onError(event)">
+      <img height="1000px" data-i="2"  src="http://nwzimg.wezhan.cn/contents/sitefiles2062/10312583/images/42728359.jpg" onerror="onError(event)">
+      <img height="1000px" data-i="3" src="http://nwzimg.wezhan.cn/contents/sitefiles2062/10312583/images/42728360.jpg" onerror="onError(event)">
+      <img height="1000px" data-i="4" src="http://nwzimg.wezhan.cn/contents/sitefiles2062/10312583/images/42728361.jpg" onerror="onError(event)">
+      <img height="1000px" data-i="5" src="http://nwzimg.wezhan.cn/contents/sitefiles2062/10312583/images/42728362.jpg" onerror="onError(event)">
+      <img height="1000px" data-i="6"  src="http://nwzimg.wezhan.cn/contents/sitefiles2062/10312583/images/42728363.jpg" onerror="onError(event)"> -->
+    </div>
+  </section>
+  <script>
+    var sketch = document.querySelector('.sketch');
+    sketch.addEventListener('click', function(){
+      Picker.visible = !Picker.visible
+    })
+    var Picker = new SketchColorPicker(sketch, {
+      color: '#13e46f',
+      onChange: function(color){
+        sketch.style.background = color.toRgbString()
+      }
+    })
+    // function onError(e){
+    //   console.log('error')
+    // }
+    
+    
+    
+    // document.addEventListener('DOMContentLoaded', () => {
+    //   document.querySelectorAll('img').forEach(img => {
+    //     img.loading = "lazy"
+    //   })
+    //   console.log('DOMContentLoaded', performance.now())
+    // })
+
+
+    // let cancelTimer;
+    // function onLoad(event) {
+    //   console.log('onLoad', event.type)
+    //   if(cancelTimer) {
+    //     clearTimeout(cancelTimer)
+    //   }
+    //   cancelTimer = setTimeout(()=>{
+    //     cancelTimer = null
+    //     console.log('run~~~~~~~~~')
+    //   }, 300)
+    // }
+
+    // document.addEventListener('readystatechange', function() {
+    //   if('interactive' === document.readyState) {
+    //     document.querySelectorAll('img').forEach(img => {
+    //       if(img.loading !== "lazy") {
+    //         img.addEventListener('load', onLoad)
+    //         img.classList.add('lazy-img')
+    //         img.loading = "lazy"
+    //         img.dataset.src = img.src
+    //         img.src = '';
+    //         setTimeout(function(){
+    //           img.src = img.dataset.src;
+    //         },100)
+    //       }
+    //     })
+    //   }
+    // })
+  </script>
+
+
+
+
+
+</body>
+
+</html>
