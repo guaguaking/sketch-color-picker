@@ -15,12 +15,13 @@ const PREFIX = 'sketch-color-picker'
 
 class UI {
   constructor(element, option){
-    // if (element) {
-    //   throw Error('必须传入一个 HTMLElement')
-    // }
-    // if (!element?.nodeType) {
-    //   throw Error('必须传入一个 HTMLElement')
-    // }
+    if (typeof element === 'string') {
+      element = document.querySelector(element);
+    }
+    if (element.nodeType !== 1) {
+      throw Error('必须传入一个 HTMLElement 或者一个有效的 selectors')
+    }
+    this._mountElement = document.body;
     this._parentElement = element;
     this._option = option;
     this.hsv = option.hsv;
@@ -48,13 +49,12 @@ class UI {
     element.innerHTML = generateTemplate({
       prefix: PREFIX
     });
-    document.body.appendChild(element)
+    this._mountElement.appendChild(element)
     this._element = element;
   }
 
   // HsvChange
   _handleHsvChange(colorInput){
-    console.log(colorInput)
     let color;
     switch (colorInput.source) {
       case 'hsv':
@@ -94,10 +94,18 @@ class UI {
       this._element.style = `display: block;left:${rect.left}px;top:${rect.top+rect.height+scrollTop+offset}px;`
     }
   }
+
   hide(){
     this._element.style = 'display: none;'
   }
-  
+
+  destroy() {
+    this.widgets.forEach(widget=>widget.destroy())
+    this._mountElement.removeChild(this._element)
+    this._parentElement = null
+    this._option = null
+    this._element = null
+  }
 }
 
 export default UI

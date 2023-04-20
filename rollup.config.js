@@ -1,9 +1,9 @@
+// https://cn.rollupjs.org/configuration-options/
 const path = require('path')
-// const json = require('@rollup/plugin-json')
 const postcss = require('rollup-plugin-postcss')
 const alias = require('@rollup/plugin-alias')
 const terser = require('@rollup/plugin-terser')
-const { nodeResolve } = require('@rollup/plugin-node-resolve')
+const resolve = require('@rollup/plugin-node-resolve')
 const babel = require('@rollup/plugin-babel')
 
 const name = 'sketch-color-picker.js';
@@ -40,15 +40,15 @@ module.exports = {
           replacement: path.resolve(__dirname, 'src')
         }
       ],
-      customResolver: nodeResolve({
+      customResolver: resolve({
         extensions: ['.mjs', '.js']
       })
     }),
-    nodeResolve(),
+    resolve(),
     babel({ babelHelpers: 'bundled' }),
     // json(),
     // terser(),
-    postcss()
+    postcss({use: 'less'})
   ],
   watch: {
     clearScreen: true,

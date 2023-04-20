@@ -32,7 +32,7 @@ class AlphaSlider extends Widget {
         const hsv = helpers.calculateChange(e, this._ui.hsv, this._element)
         this.handleChange(hsv);
       }, 50),
-      handleMouseUp: (e)=>{
+      handleMouseUp: ()=>{
         document.removeEventListener('mousemove', this._events.handleChange)
         document.removeEventListener('mouseup', this._events.handleMouseUp)
       }

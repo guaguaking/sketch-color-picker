@@ -18,7 +18,6 @@ const PRESET_COLORS = [
   '#ffffff'
 ]
 
-
 class SketchColorPicker {
   constructor(wrapper, option={
     color: 'rgb(0,0,255)'
@@ -33,19 +32,13 @@ class SketchColorPicker {
     
   }
 
+  // 
   _initColor(originalColor) {
     const color = tinyColor(originalColor);
     if(!color.isValid()) {
-      throw Error('color 不是一个有效的颜色值')
+      throw Error('option.color 不是一个有效的颜色值, 你可以传入 #ff0000 rgba(255,255,255,0.5) ...')
     }
     this.hsv = color.toHsv();
-  }
-
-  handleHsvChange = (color)=> {
-    this.color = tinyColor(color);
-    if(this._option?.onChange) {
-      this._option.onChange(color)
-    }
   }
 
   _isVisible = false
@@ -61,6 +54,19 @@ class SketchColorPicker {
     } else {
       this.ui.hide();
     }
+  }
+
+  handleHsvChange = (color)=> {
+    this.color = tinyColor(color);
+    if(this._option?.onChange) {
+      this._option.onChange(color)
+    }
+  }
+
+  destroy(){
+    this.ui.destroy();
+    this.ui = null;
+    this._option = null;
   }
 }
 

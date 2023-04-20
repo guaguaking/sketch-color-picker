@@ -4,7 +4,7 @@ class Widget {
   constructor(ui, selector) {
     this._ui = ui;
     this._element = ui._selector(selector)
-    this._events = {};
+    this._events = null;
     this._makeUiElement()
   }
 
@@ -16,11 +16,6 @@ class Widget {
     return tinyColor(color)
   }
 
-  _makeUiElement(){
-    
-  }
-
-
   _selector(selector, _element=this._element){
     if(!_element) throw Error('请先声明_element！')
     return _element.querySelector(selector)
@@ -30,7 +25,21 @@ class Widget {
     return this._element.querySelectorAll(selector)
   }
 
+  _makeUiElement(){}
+
+  _addEvent(){}
+
+  _removeEvent(){}
+
   render() {}
+
+  destroy(){
+    this._removeEvent()
+    this._handler = null;
+    this._events = null;
+    this._element = null;
+    this._ui = null;
+  }
 }
 
 export default Widget;

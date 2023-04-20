@@ -35,23 +35,23 @@ export default ({
   <div class="${prefix}__gridbox" style="padding-top: 4px;" widget="editable-input">
     <div class="${prefix}__color-Hex ${prefix}_input">
         <input type="text"/>
-        <label> hex </label>
+        <label>hex</label>
     </div>
     <div class="${prefix}__color-R ${prefix}_input">
       <input type="text"/>
-      <label> r </label>
+      <label>r</label>
     </div>
     <div class="${prefix}__color-G ${prefix}_input">
       <input type="text"/>
-      <label> g </label>
+      <label>g</label>
     </div>
     <div class="${prefix}__color-B ${prefix}_input">
       <input type="text"/>
-      <label> b </label>
+      <label>b</label>
     </div>
     <div class="${prefix}__color-A ${prefix}_input">
       <input type="text"/>
-      <label> a </label>
+      <label>a</label>
     </div>
   </div>
 

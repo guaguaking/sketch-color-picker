@@ -23,7 +23,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = ".sketch-color-picker__wrapper {\n  position: absolute;\n}\n.sketch-color-picker {\n  width: 220px;\n  padding: 10px 10px 0px;\n  box-sizing: border-box;\n  background: #ffffff;\n  border-radius: 4px;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 8px 16px;\n  user-select: none;\n}\n.sketch-color-picker__sketchpad {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.sketch-color-picker__sketchpad-lr {\n  position: absolute;\n  inset: 0;\n  background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));\n}\n.sketch-color-picker__sketchpad-tm {\n  position: absolute;\n  inset: 0;\n  background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));\n}\n.sketch-color-picker__flexbox {\n  display: flex;\n}\n.sketch-color-picker__gridbox {\n  display: grid;\n  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;\n  grid-column-gap: 6px;\n  text-align: center;\n}\n.sketch-color-picker__gridbox input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: #cccccc 0px 0px 0px 1px inset;\n  font-size: 11px;\n  text-align: inherit;\n}\n.sketch-color-picker__gridbox label {\n  display: block;\n  font-size: 11px;\n  color: #222222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.sketch-color-picker__hue {\n  position: relative;\n  height: 10px;\n}\n.sketch-color-picker__hue-bg {\n  position: absolute;\n  inset: 0px;\n  background: linear-gradient(to right, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);\n}\n.sketch-color-picker__transparency {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAADFJREFUOE9jZGBgEGHAD97gk2YcNYBhmIQBgWSAP52AwoAQwJvQRg1gACckQoC2gQgAIF8IscwEtKYAAAAASUVORK5CYII=\") left center;\n}\n.sketch-color-picker__transparency-bg {\n  position: absolute;\n  inset: 0px;\n}\n.sketch-color-picker__handler {\n  position: absolute;\n}\n.sketch-color-picker__handler::after {\n  content: '';\n  display: block;\n  width: 4px;\n  height: 10px;\n  border-radius: 1px;\n  box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 3px;\n  background: #ffffff;\n  transform: translateX(-2px);\n}\n.sketch-color-picker__circle-handler {\n  width: 4px;\n  height: 4px;\n  box-shadow: #ffffff 0px 0px 0px 1.5px, rgba(0, 0, 0, 0.3) 0px 0px 1px 1px inset, rgba(0, 0, 0, 0.4) 0px 0px 1px 2px;\n  border-radius: 50%;\n  transform: translate(-2px, -2px);\n  position: absolute;\n}\n.sketch-color-picker__color {\n  position: relative;\n  width: 24px;\n  height: 24px;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAADFJREFUOE9jZGBgEGHAD97gk2YcNYBhmIQBgWSAP52AwoAQwJvQRg1gACckQoC2gQgAIF8IscwEtKYAAAAASUVORK5CYII=\") left center;\n}\n.sketch-color-picker__color-bg {\n  position: absolute;\n  inset: 0px;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.25) 0px 0px;\n}\n.sketch-color-picker__color-Hex {\n  flex: 2 1 0%;\n}\n.sketch-color-picker__color-R,\n.sketch-color-picker__color-G,\n.sketch-color-picker__color-B,\n.sketch-color-picker__color-A {\n  flex: 1 1 0%;\n}\n.sketch-color-picker__preset {\n  flex-wrap: wrap;\n  margin: 0px -10px;\n  padding: 10px 0px 0px 10px;\n  border-top: 1px solid #eeeeee;\n}\n.sketch-color-picker__preset div {\n  width: 16px;\n  height: 16px;\n  margin: 0px 10px 10px 0px;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n  border-radius: 3px;\n  cursor: pointer;\n}\n";
+var css_248z = ".sketch-color-picker__wrapper {\n  position: absolute;\n  z-index: 1000;\n}\n.sketch-color-picker {\n  width: 220px;\n  padding: 10px 10px 0px;\n  box-sizing: border-box;\n  background: #ffffff;\n  border-radius: 4px;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 8px 16px;\n  user-select: none;\n}\n.sketch-color-picker__sketchpad {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.sketch-color-picker__sketchpad-lr {\n  position: absolute;\n  inset: 0;\n  background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));\n}\n.sketch-color-picker__sketchpad-tm {\n  position: absolute;\n  inset: 0;\n  background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));\n}\n.sketch-color-picker__flexbox {\n  display: flex;\n}\n.sketch-color-picker__gridbox {\n  display: grid;\n  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;\n  grid-column-gap: 6px;\n  text-align: center;\n}\n.sketch-color-picker__gridbox input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: #cccccc 0px 0px 0px 1px inset;\n  font-size: 11px;\n  text-align: inherit;\n}\n.sketch-color-picker__gridbox label {\n  display: block;\n  font-size: 11px;\n  color: #222222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.sketch-color-picker__hue {\n  position: relative;\n  height: 10px;\n}\n.sketch-color-picker__hue-bg {\n  position: absolute;\n  inset: 0px;\n  background: linear-gradient(to right, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);\n}\n.sketch-color-picker__transparency {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAADFJREFUOE9jZGBgEGHAD97gk2YcNYBhmIQBgWSAP52AwoAQwJvQRg1gACckQoC2gQgAIF8IscwEtKYAAAAASUVORK5CYII=\") left center;\n}\n.sketch-color-picker__transparency-bg {\n  position: absolute;\n  inset: 0px;\n}\n.sketch-color-picker__handler {\n  position: absolute;\n}\n.sketch-color-picker__handler::after {\n  content: '';\n  display: block;\n  width: 4px;\n  height: 10px;\n  border-radius: 1px;\n  box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 3px;\n  background: #ffffff;\n  transform: translateX(-2px);\n}\n.sketch-color-picker__circle-handler {\n  width: 4px;\n  height: 4px;\n  box-shadow: #ffffff 0px 0px 0px 1.5px, rgba(0, 0, 0, 0.3) 0px 0px 1px 1px inset, rgba(0, 0, 0, 0.4) 0px 0px 1px 2px;\n  border-radius: 50%;\n  transform: translate(-2px, -2px);\n  position: absolute;\n}\n.sketch-color-picker__color {\n  position: relative;\n  width: 24px;\n  height: 24px;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAADFJREFUOE9jZGBgEGHAD97gk2YcNYBhmIQBgWSAP52AwoAQwJvQRg1gACckQoC2gQgAIF8IscwEtKYAAAAASUVORK5CYII=\") left center;\n}\n.sketch-color-picker__color-bg {\n  position: absolute;\n  inset: 0px;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.25) 0px 0px;\n}\n.sketch-color-picker__color-Hex {\n  flex: 2 1 0%;\n}\n.sketch-color-picker__color-R,\n.sketch-color-picker__color-G,\n.sketch-color-picker__color-B,\n.sketch-color-picker__color-A {\n  flex: 1 1 0%;\n}\n.sketch-color-picker__preset {\n  flex-wrap: wrap;\n  margin: 0px -10px;\n  padding: 10px 0px 0px 10px;\n  border-top: 1px solid #eeeeee;\n}\n.sketch-color-picker__preset div {\n  width: 16px;\n  height: 16px;\n  margin: 0px 10px 10px 0px;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n  border-radius: 3px;\n  cursor: pointer;\n}\n";
 styleInject(css_248z);
 
 function _classCallCheck(instance, Constructor) {
@@ -1326,7 +1326,7 @@ function validateWCAG2Parms(parms) {
 
 var generateTemplate = (function (_ref) {
   var prefix = _ref.prefix;
-  return "\n<div class=\"".concat(prefix, "\">\n  <div class=\"").concat(prefix, "__sketchpad\" widget=\"sketchpad\">\n    <div class=\"").concat(prefix, "__sketchpad-lr\"></div>\n    <div class=\"").concat(prefix, "__sketchpad-tm\"></div>\n    <div class=\"").concat(prefix, "__circle-handler\" handler></div>\n  </div>\n\n  <div class=\"").concat(prefix, "__flexbox\">\n\n    <div style=\"padding: 4px 0px; flex: 1 1 0%;\">\n\n      <div class=\"").concat(prefix, "__hue\" widget=\"hue-slider\">\n        <div class=\"").concat(prefix, "__hue-bg\" background>\n          <div class=\"").concat(prefix, "__handler\" handler></div>\n        </div>\n      </div>\n\n      <div class=\"").concat(prefix, "__transparency\" widget=\"alpha-slider\">\n        <div class=\"").concat(prefix, "__transparency-bg\" background>\n          <div class=\"").concat(prefix, "__handler\" handler></div>\n        </div>\n      </div>\n\n    </div>\n\n    <div class=\"").concat(prefix, "__color\" widget=\"preview\">\n      <div class=\"").concat(prefix, "__color-bg\" background></div>\n    </div>\n\n  </div>\n\n  <div class=\"").concat(prefix, "__gridbox\" style=\"padding-top: 4px;\" widget=\"editable-input\">\n    <div class=\"").concat(prefix, "__color-Hex ").concat(prefix, "_input\">\n        <input type=\"text\"/>\n        <label> hex </label>\n    </div>\n    <div class=\"").concat(prefix, "__color-R ").concat(prefix, "_input\">\n      <input type=\"text\"/>\n      <label> r </label>\n    </div>\n    <div class=\"").concat(prefix, "__color-G ").concat(prefix, "_input\">\n      <input type=\"text\"/>\n      <label> g </label>\n    </div>\n    <div class=\"").concat(prefix, "__color-B ").concat(prefix, "_input\">\n      <input type=\"text\"/>\n      <label> b </label>\n    </div>\n    <div class=\"").concat(prefix, "__color-A ").concat(prefix, "_input\">\n      <input type=\"text\"/>\n      <label> a </label>\n    </div>\n  </div>\n\n<div class=\"").concat(prefix, "__flexbox ").concat(prefix, "__preset\" widget=\"preset-buttons\"></div>\n</div>\n");
+  return "\n<div class=\"".concat(prefix, "\">\n  <div class=\"").concat(prefix, "__sketchpad\" widget=\"sketchpad\">\n    <div class=\"").concat(prefix, "__sketchpad-lr\"></div>\n    <div class=\"").concat(prefix, "__sketchpad-tm\"></div>\n    <div class=\"").concat(prefix, "__circle-handler\" handler></div>\n  </div>\n\n  <div class=\"").concat(prefix, "__flexbox\">\n\n    <div style=\"padding: 4px 0px; flex: 1 1 0%;\">\n\n      <div class=\"").concat(prefix, "__hue\" widget=\"hue-slider\">\n        <div class=\"").concat(prefix, "__hue-bg\" background>\n          <div class=\"").concat(prefix, "__handler\" handler></div>\n        </div>\n      </div>\n\n      <div class=\"").concat(prefix, "__transparency\" widget=\"alpha-slider\">\n        <div class=\"").concat(prefix, "__transparency-bg\" background>\n          <div class=\"").concat(prefix, "__handler\" handler></div>\n        </div>\n      </div>\n\n    </div>\n\n    <div class=\"").concat(prefix, "__color\" widget=\"preview\">\n      <div class=\"").concat(prefix, "__color-bg\" background></div>\n    </div>\n\n  </div>\n\n  <div class=\"").concat(prefix, "__gridbox\" style=\"padding-top: 4px;\" widget=\"editable-input\">\n    <div class=\"").concat(prefix, "__color-Hex ").concat(prefix, "_input\">\n        <input type=\"text\"/>\n        <label>hex</label>\n    </div>\n    <div class=\"").concat(prefix, "__color-R ").concat(prefix, "_input\">\n      <input type=\"text\"/>\n      <label>r</label>\n    </div>\n    <div class=\"").concat(prefix, "__color-G ").concat(prefix, "_input\">\n      <input type=\"text\"/>\n      <label>g</label>\n    </div>\n    <div class=\"").concat(prefix, "__color-B ").concat(prefix, "_input\">\n      <input type=\"text\"/>\n      <label>b</label>\n    </div>\n    <div class=\"").concat(prefix, "__color-A ").concat(prefix, "_input\">\n      <input type=\"text\"/>\n      <label>a</label>\n    </div>\n  </div>\n\n<div class=\"").concat(prefix, "__flexbox ").concat(prefix, "__preset\" widget=\"preset-buttons\"></div>\n</div>\n");
 });
 
 var Widget = /*#__PURE__*/function () {
@@ -1334,7 +1334,7 @@ var Widget = /*#__PURE__*/function () {
     _classCallCheck(this, Widget);
     this._ui = ui;
     this._element = ui._selector(selector);
-    this._events = {};
+    this._events = null;
     this._makeUiElement();
   }
   _createClass(Widget, [{
@@ -1348,9 +1348,6 @@ var Widget = /*#__PURE__*/function () {
       return tinycolor(color);
     }
   }, {
-    key: "_makeUiElement",
-    value: function _makeUiElement() {}
-  }, {
     key: "_selector",
     value: function _selector(selector) {
       var _element = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._element;
@@ -1363,8 +1360,26 @@ var Widget = /*#__PURE__*/function () {
       return this._element.querySelectorAll(selector);
     }
   }, {
+    key: "_makeUiElement",
+    value: function _makeUiElement() {}
+  }, {
+    key: "_addEvent",
+    value: function _addEvent() {}
+  }, {
+    key: "_removeEvent",
+    value: function _removeEvent() {}
+  }, {
     key: "render",
     value: function render() {}
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      this._removeEvent();
+      this._handler = null;
+      this._events = null;
+      this._element = null;
+      this._ui = null;
+    }
   }]);
   return Widget;
 }();
@@ -1449,7 +1464,7 @@ var Sketchpad = /*#__PURE__*/function (_Widget) {
           var hsv = calculateChange$3(e, _this2._ui.hsv, _this2._element);
           _this2.handleChange(hsv);
         }, 50),
-        handleMouseUp: function handleMouseUp(e) {
+        handleMouseUp: function handleMouseUp() {
           document.removeEventListener('mousemove', _this2._events.handleChange);
           document.removeEventListener('mouseup', _this2._events.handleMouseUp);
         }
@@ -1516,7 +1531,7 @@ var calculateChange$2 = function calculateChange(e, hsv, container) {
   var rect = container.getBoundingClientRect();
   var containerWidth = rect.width;
   var x = typeof e.pageX === 'number' ? e.pageX : e.touches[0].pageX;
-  typeof e.pageY === 'number' ? e.pageY : e.touches[0].pageY;
+  // const y = typeof e.pageY === 'number' ? e.pageY : e.touches[0].pageY
   var left = x - (rect.left + window.pageXOffset);
   var hex;
   if (left < 0) {
@@ -1574,7 +1589,7 @@ var HueSlider = /*#__PURE__*/function (_Widget) {
           var hsv = calculateChange$2(e, _this2._ui.hsv, _this2._element);
           _this2.handleChange(hsv);
         }, 50),
-        handleMouseUp: function handleMouseUp(e) {
+        handleMouseUp: function handleMouseUp() {
           document.removeEventListener('mousemove', _this2._events.handleChange);
           document.removeEventListener('mouseup', _this2._events.handleMouseUp);
         }
@@ -1596,7 +1611,7 @@ var calculateChange$1 = function calculateChange(e, hsv, container) {
   var rect = container.getBoundingClientRect();
   var containerWidth = rect.width;
   var x = typeof e.pageX === 'number' ? e.pageX : e.touches[0].pageX;
-  typeof e.pageY === 'number' ? e.pageY : e.touches[0].pageY;
+  // const y = typeof e.pageY === 'number' ? e.pageY : e.touches[0].pageY
   var left = x - (rect.left + window.pageXOffset);
   var alpha;
   if (left < 0) {
@@ -1656,7 +1671,7 @@ var AlphaSlider = /*#__PURE__*/function (_Widget) {
           var hsv = calculateChange$1(e, _this2._ui.hsv, _this2._element);
           _this2.handleChange(hsv);
         }, 50),
-        handleMouseUp: function handleMouseUp(e) {
+        handleMouseUp: function handleMouseUp() {
           document.removeEventListener('mousemove', _this2._events.handleChange);
           document.removeEventListener('mouseup', _this2._events.handleMouseUp);
         }
@@ -1758,7 +1773,7 @@ var EditableInput = /*#__PURE__*/function (_Widget) {
       }, color.toRgb());
       this._originalValue.a *= 100;
       this.handler.forEach(function (input) {
-        var label = input.nextElementSibling.innerText.toLowerCase();
+        var label = input.nextElementSibling.innerText.toLowerCase().trim();
         input.value = _this2._originalValue[label];
       });
     }
@@ -1778,12 +1793,13 @@ var PREFIX = 'sketch-color-picker';
 var UI = /*#__PURE__*/function () {
   function UI(element, option) {
     _classCallCheck(this, UI);
-    // if (element) {
-    //   throw Error('必须传入一个 HTMLElement')
-    // }
-    // if (!element?.nodeType) {
-    //   throw Error('必须传入一个 HTMLElement')
-    // }
+    if (typeof element === 'string') {
+      element = document.querySelector(element);
+    }
+    if (element.nodeType !== 1) {
+      throw Error('必须传入一个 HTMLElement 或者一个有效的 selectors');
+    }
+    this._mountElement = document.body;
     this._parentElement = element;
     this._option = option;
     this.hsv = option.hsv;
@@ -1808,7 +1824,7 @@ var UI = /*#__PURE__*/function () {
       element.innerHTML = generateTemplate({
         prefix: PREFIX
       });
-      document.body.appendChild(element);
+      this._mountElement.appendChild(element);
       this._element = element;
     }
 
@@ -1816,7 +1832,6 @@ var UI = /*#__PURE__*/function () {
   }, {
     key: "_handleHsvChange",
     value: function _handleHsvChange(colorInput) {
-      console.log(colorInput);
       var color;
       switch (colorInput.source) {
         case 'hsv':
@@ -1866,6 +1881,17 @@ var UI = /*#__PURE__*/function () {
     value: function hide() {
       this._element.style = 'display: none;';
     }
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      this.widgets.forEach(function (widget) {
+        return widget.destroy();
+      });
+      this._mountElement.removeChild(this._element);
+      this._parentElement = null;
+      this._option = null;
+      this._element = null;
+    }
   }]);
   return UI;
 }();
@@ -1878,6 +1904,7 @@ var SketchColorPicker = /*#__PURE__*/function () {
       color: 'rgb(0,0,255)'
     };
     _classCallCheck(this, SketchColorPicker);
+    _defineProperty(this, "_isVisible", false);
     _defineProperty(this, "handleHsvChange", function (color) {
       var _this$_option;
       _this.color = tinycolor(color);
@@ -1885,7 +1912,6 @@ var SketchColorPicker = /*#__PURE__*/function () {
         _this._option.onChange(color);
       }
     });
-    _defineProperty(this, "_isVisible", false);
     this._option = option;
     this._initColor(option.color);
     this.ui = new UI(wrapper, {
@@ -1896,12 +1922,14 @@ var SketchColorPicker = /*#__PURE__*/function () {
       onChange: this.handleHsvChange
     });
   }
+
+  // 
   _createClass(SketchColorPicker, [{
     key: "_initColor",
     value: function _initColor(originalColor) {
       var color = tinycolor(originalColor);
       if (!color.isValid()) {
-        throw Error('color 不是一个有效的颜色值');
+        throw Error('option.color 不是一个有效的颜色值, 你可以传入 #ff0000 rgba(255,255,255,0.5) ...');
       }
       this.hsv = color.toHsv();
     }
@@ -1917,6 +1945,13 @@ var SketchColorPicker = /*#__PURE__*/function () {
       } else {
         this.ui.hide();
       }
+    }
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      this.ui.destroy();
+      this.ui = null;
+      this._option = null;
     }
   }]);
   return SketchColorPicker;

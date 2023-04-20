@@ -18,7 +18,7 @@ class EditableInput extends Widget {
     this._originalValue.a *= 100
 
     this.handler.forEach((input)=>{
-      const label = input.nextElementSibling.innerText.toLowerCase();
+      const label = input.nextElementSibling.innerText.toLowerCase().trim();
       input.value = this._originalValue[label]
     })
   }
