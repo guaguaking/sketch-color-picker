@@ -27,7 +27,3 @@
 
 </script>
 ```
-
-
-[license-image]: http://img.shields.io/npm/l/react-color.svg
-[license-url]: LICENSE
