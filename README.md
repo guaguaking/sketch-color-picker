@@ -8,7 +8,7 @@
 var Picker = new SketchColorPicker(sketch, {
   color: '#13e46f',
   onChange: function(color){
-    sketch.style.background = color.toRgbString()
+    document.body.style.backgroundColor = color.toRgbString()
   }
 })
 </script>
