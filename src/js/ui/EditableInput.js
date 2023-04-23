@@ -1,5 +1,5 @@
 import Widget from './Widget';
-import * as helpers from '../helpers/color'
+import * as helpers from '@/js/helpers/color'
 
 class EditableInput extends Widget {
   constructor(ui){

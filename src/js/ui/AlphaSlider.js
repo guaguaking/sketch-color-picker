@@ -1,6 +1,6 @@
 import Widget from './Widget';
-import * as helpers from '../helpers/alpha'
-import * as utils from '../helpers/utils'
+import * as helpers from '@/js/helpers/alpha'
+import * as utils from '@/js/helpers/utils'
 
 class AlphaSlider extends Widget {
   constructor(ui){

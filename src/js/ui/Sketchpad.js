@@ -1,6 +1,6 @@
 import Widget from './Widget';
-import * as helpers from '../helpers/saturation'
-import * as utils from '../helpers/utils'
+import * as helpers from '@/js/helpers/saturation'
+import * as utils from '@/js/helpers/utils'
 
 class Sketchpad extends Widget {
   constructor(ui){

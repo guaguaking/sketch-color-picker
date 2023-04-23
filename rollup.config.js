@@ -6,26 +6,26 @@ const terser = require('@rollup/plugin-terser')
 const resolve = require('@rollup/plugin-node-resolve')
 const babel = require('@rollup/plugin-babel')
 
-const name = 'sketch-color-picker.js';
+// const name = 'sketch-color-picker.js';
 
 module.exports = {
   input: 'src/main.js',
   output: [
     {
-      file: `lib/sketch-color-picker.js`,
+      file: `dist/sketch-color-picker.js`,
       format: 'umd',
       name: 'SketchColorPicker',
     },
     {
-      file: `lib/sketch-color-picker.min.js`,
+      file: `dist/sketch-color-picker.min.js`,
       format: 'umd',
       name: 'SketchColorPicker',
       plugins: [terser()]
     },
-    {
-      file: `es/${name}`,
-      format: 'es',
-    },
+    // {
+    //   file: `es/${name}`,
+    //   format: 'es',
+    // },
     // {
     //   file: `dist/${name}.cjs.js`,
     //   format: 'cjs',
@@ -46,9 +46,7 @@ module.exports = {
     }),
     resolve(),
     babel({ babelHelpers: 'bundled' }),
-    // json(),
-    // terser(),
-    postcss({use: 'less'})
+    postcss()
   ],
   watch: {
     clearScreen: true,

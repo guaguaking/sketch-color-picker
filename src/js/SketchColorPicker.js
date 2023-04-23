@@ -1,4 +1,4 @@
-import UI from '@/js/Ui';
+import UI from '@/js/ui/UI';
 import tinyColor from "tinycolor2";
 const PRESET_COLORS = [
   '#d0021b',
@@ -25,7 +25,7 @@ class SketchColorPicker {
     this._option = option;
     this._initColor(option.color);
     this.ui = new UI(wrapper, {
-      presetColors: PRESET_COLORS.filter(c=>tinyColor(c).isValid()),
+      presetColors: PRESET_COLORS,
       hsv: this.hsv,
       onChange: this.handleHsvChange
     })
@@ -58,6 +58,7 @@ class SketchColorPicker {
 
   handleHsvChange = (color)=> {
     this.color = tinyColor(color);
+    this.hsv = this.color.toHsv();
     if(this._option?.onChange) {
       this._option.onChange(color)
     }
