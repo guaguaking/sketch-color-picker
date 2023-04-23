@@ -1,4 +1,4 @@
-function throttle(func, delay ) {
+export function throttle(func, delay ) {
   let prev = Date.now();
   return function(){
     const context = this;
@@ -9,8 +9,4 @@ function throttle(func, delay ) {
       prev = now;
     }
   }
-}
-
-export {
-  throttle
 }

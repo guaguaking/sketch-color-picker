@@ -3,8 +3,8 @@ export default ({
 }) => `
 <div class="${prefix}">
   <div class="${prefix}__sketchpad" widget="sketchpad">
-    <div class="${prefix}__sketchpad-lr"></div>
-    <div class="${prefix}__sketchpad-tm"></div>
+    <div class="${prefix}__sketchpad—saturation"></div>
+    <div class="${prefix}__sketchpad—value"></div>
     <div class="${prefix}__circle-handler" handler></div>
   </div>
 

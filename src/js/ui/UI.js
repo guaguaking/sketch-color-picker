@@ -1,12 +1,12 @@
 import tinyColor from "tinycolor2";
 import generateTemplate from '@/js/ui/template'
 
-import Sketchpad from './ui/Sketchpad'
-import PresetColorButtons from './ui/PresetColorButtons'
-import HueSlider from './ui/HueSlider'
-import AlphaSlider from './ui/AlphaSlider'
-import Preview from './ui/Preview'
-import EditableInput from './ui/EditableInput'
+import Sketchpad from './Sketchpad'
+import PresetColorButtons from './PresetColorButtons'
+import HueSlider from './HueSlider'
+import AlphaSlider from './AlphaSlider'
+import Preview from './Preview'
+import EditableInput from './EditableInput'
 
 
 

@@ -6,12 +6,13 @@ export const calculateChange = (e, hsv, container) => {
   const left = x - (rect.left + window.pageXOffset)
 
   let alpha;
+  
   if (left < 0) {
     alpha = 0
-  } else if (left > containerWidth) {
-    alpha = 1
+  } else if (left >= containerWidth) {
+    alpha = 100
   } else {
-    alpha = Math.floor((left / containerWidth)*100)
+    alpha = (left / containerWidth)*100 >> 0
   }
 
     if (hsv.a !== alpha) {
@@ -19,7 +20,7 @@ export const calculateChange = (e, hsv, container) => {
         h: hsv.h,
         s: hsv.s,
         v: hsv.v,
-        a: alpha/100,
+        a: alpha / 100,
         source: 'hsv',
       }
     } else {

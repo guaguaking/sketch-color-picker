@@ -1,6 +1,6 @@
 import Widget from './Widget';
-import * as helpers from '../helpers/hue'
-import * as utils from '../helpers/utils'
+import * as helpers from '@/js/helpers/hue'
+import * as utils from '@/js/helpers/utils'
 
 class HueSlider extends Widget {
   constructor(ui){
